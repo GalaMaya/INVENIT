@@ -1,0 +1,148 @@
+# ============================================
+# LARAVEL
+# ============================================
+/vendor
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+.env
+.env.backup
+.env.production
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+npm-debug.log
+yarn-error.log
+/.fleet
+/.idea
+/.vscode
+
+# ============================================
+# LARAVEL SPECIFIC
+# ============================================
+# Laravel 11+
+/bootstrap/cache/*
+!/bootstrap/cache/.gitkeep
+
+# Storage
+/storage/app/public/*
+/storage/framework/cache/data/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/logs/*
+
+# ============================================
+# IDE & EDITOR
+# ============================================
+# VS Code
+/.vscode/*
+!/.vscode/settings.json
+!/.vscode/tasks.json
+!/.vscode/launch.json
+!/.vscode/extensions.json
+*.code-workspace
+
+# PhpStorm / IntelliJ
+/.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# ============================================
+# OS GENERATED
+# ============================================
+# macOS
+.DS_Store
+.AppleDouble
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+
+# ============================================
+# COMPOSER & NPM
+# ============================================
+composer.phar
+/vendor/
+node_modules/
+npm-debug.log
+yarn-error.log
+.pnpm-debug.log*
+
+# ============================================
+# ENVIRONMENT & CONFIG
+# ============================================
+.env
+.env.local
+.env.*.local
+.php-version
+
+# ============================================
+# TESTING & COVERAGE
+# ============================================
+.phpunit.result.cache
+.phpunit.cache
+coverage/
+*.coverage
+.php-cs-fixer.cache
+
+# ============================================
+# BUILD ARTIFACTS
+# ============================================
+/public/css
+/public/js
+/public/mix-manifest.json
+/public/hot
+mix-manifest.json
+
+# ============================================
+# DATABASE
+# ============================================
+*.sql
+*.sqlite
+database/*.sqlite
+
+# ============================================
+# LOGS
+# ============================================
+*.log
+/storage/logs/*.log
+
+# ============================================
+# BACKUPS & TEMP
+# ============================================
+*.bak
+*.backup
+*.tmp
+*.temp
+~*
+
+# ============================================
+# SECURITY
+# ============================================
+*.pem
+*.key
+*.crt
+*.p12
