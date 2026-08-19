@@ -103,15 +103,15 @@ class Asset extends Model
     }
 
     /**
-     * Warna badge untuk UI (Tailwind classes)
+     * Warna badge untuk UI
      */
     public function getStatusColorAttribute(): string
     {
         return match($this->status) {
-            'available' => 'bg-green-100 text-green-800',
-            'in_use'    => 'bg-blue-100 text-blue-800',
-            'damaged'   => 'bg-red-100 text-red-800',
-            default     => 'bg-gray-100 text-gray-800',
+            'available' => 'badge-success',
+            'in_use'    => 'badge-primary',
+            'damaged'   => 'badge-danger',
+            default     => 'badge-info',
         };
     }
 

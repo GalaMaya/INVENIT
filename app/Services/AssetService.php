@@ -23,4 +23,9 @@ class AssetService implements AssetServiceInterface {
             'TotalInUse' => $this->assetRepository->CountByStatus('in_use')
         ];
     }
+
+    public function GetRecentAssets(int $limit =  0)
+    {
+        return $this->assetRepository->GetRecentAssets($limit);
+    }
 }

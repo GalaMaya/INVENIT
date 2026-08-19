@@ -44,6 +44,10 @@ class AssetRepository implements AssetRepositoryInterface {
         return Asset::with(['category', 'assignments.user', 'currentAssignment.user'])->find($id);
     }
 
+    public function GetRecentAssets(int $limit = 0){
+        return Asset::with('category')->latest()->take($limit)->get();
+    }
+
     public function Create(array $data){
         return Asset::create($data);
     }
