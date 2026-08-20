@@ -9,7 +9,7 @@ class AssetRepository implements AssetRepositoryInterface {
         return Asset::with('category')->get();
     }
 
-    public function Paginate(int $perpage = 10, array $filter = []){
+    public function Paginate(int $perPage = 10, array $filters = []){
         $query = Asset::with(['category', 'currentAssignment.user']);
 
         // Filter by search
@@ -23,21 +23,21 @@ class AssetRepository implements AssetRepositoryInterface {
         }
 
         // Filter by status
-        if (!empty($filters['status'])) {
+        if (!empty($filters['status']) && $filters['status'] !== 'all') {
             $query->where('status', $filters['status']);
         }
 
         // Filter by category
-        if (!empty($filters['category_id'])) {
+        if (!empty($filters['category_id']) && $filters['category_id'] !== 'all') {
             $query->where('category_id', $filters['category_id']);
         }
 
         // Filter by location
-        if (!empty($filters['location'])) {
+        if (!empty($filters['location']) && $filters['location']) {
             $query->where('location', 'like', "%{$filters['location']}%");
         }
 
-        return $query->latest()->paginate($perPage);
+        return $query->latest()->simplePaginate($perPage);
     }
 
     public function GetById(int $id){

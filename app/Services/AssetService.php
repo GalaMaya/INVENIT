@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Contracts\AssetRepositoryInterface;
 use App\Contracts\AssetServiceInterface;
+use App\Models\Category;
 
 class AssetService implements AssetServiceInterface {
 
@@ -27,5 +28,13 @@ class AssetService implements AssetServiceInterface {
     public function GetRecentAssets(int $limit =  0)
     {
         return $this->assetRepository->GetRecentAssets($limit);
+    }
+
+    public function GetPaginateAssets(int $paginate = 5, array $filter = []){
+        return $this->assetRepository->Paginate($paginate, $filter);
+    }
+
+    public function GetCategory() {
+        return Category::all();
     }
 }

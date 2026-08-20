@@ -28,8 +28,8 @@
     </div>
 
     <!-- Nav Item - Assets -->
-    <li class="nav-item">
-        <a class="nav-link" href="#">
+    <li class="nav-item {{ request()->routeIs('assets') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('assets') }}">
             <i class="fas fa-fw fa-box"></i>
             <span>Assets</span>
         </a>
